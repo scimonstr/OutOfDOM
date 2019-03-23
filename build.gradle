@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.no'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+application {
+    applicationDefaultJvmArgs = ['-Dwebdriver.chrome.driver=driver/chromedriver']
+    mainClassName = 'org.no.GetTextOutOfDOM'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+}
